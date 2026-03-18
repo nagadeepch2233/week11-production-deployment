@@ -1,7 +1,10 @@
-DEBUG = True
-ENV_NAME = "testing"
+import os
 
-LOAN_DAYS = 7
-DATA_FILE = "library_test.json"
+ENV = os.getenv("APP_ENV", "development")
 
-LOG_LEVEL = "WARNING"
+if ENV == "production":
+    from .production import *
+elif ENV == "testing":
+    from .testing import *
+else:
+    from .development import *
