@@ -1,0 +1,5 @@
+│── scripts/
+│ ├── deploy.sh
+│ ├── backup.sh
+│ ├── migrate.sh
+│ └── healthcheck.sh
