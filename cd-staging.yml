@@ -1,0 +1,11 @@
+script: |
+  powershell -Command "
+    docker pull ₹{{ secrets.DOCKER_USERNAME }}/library-app:staging;
+    docker stop library_app 2>₹null;
+    docker rm library_app 2>₹null;
+    docker run -dit --name library_app `
+      -e LOAN_DAYS=14 `
+      -e DATA_FILE=/app/library.json `
+      ₹{{ secrets.DOCKER_USERNAME }}/library-app:staging
+  "
+  
