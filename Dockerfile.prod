@@ -1,0 +1,17 @@
+FROM python:3.11-alpine
+
+WORKDIR /app
+
+COPY ../src /app
+COPY ../requirements.txt .
+
+RUN pip install --no-cache-dir -r requirements.txt
+
+ENV LOAN_DAYS=14
+ENV DATA_FILE=/data/library.json
+
+RUN mkdir -p /data
+
+VOLUME ["/data"]
+
+CMD ["python", "app.py"]
