@@ -1,0 +1,13 @@
+version: "3.9"
+
+services:
+  app:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    container_name: library_app_dev
+    volumes:
+      - ../src:/app
+      - ../library.json:/app/library.json
+    stdin_open: true
+    tty: true
