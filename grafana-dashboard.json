@@ -1,0 +1,36 @@
+{
+  "dashboard": {
+    "title": "Library App Monitoring",
+    "panels": [
+      {
+        "type": "graph",
+        "title": "CPU Usage",
+        "targets": [
+          {
+            "expr": "rate(container_cpu_usage_seconds_total[1m])",
+            "legendFormat": "CPU"
+          }
+        ]
+      },
+      {
+        "type": "graph",
+        "title": "Memory Usage",
+        "targets": [
+          {
+            "expr": "container_memory_usage_bytes",
+            "legendFormat": "Memory"
+          }
+        ]
+      },
+      {
+        "type": "stat",
+        "title": "App Status",
+        "targets": [
+          {
+            "expr": "up{job=\"library_app\"}"
+          }
+        ]
+      }
+    ]
+  }
+}
