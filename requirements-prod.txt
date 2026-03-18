@@ -1,0 +1,9 @@
+# Core runtime dependencies
+flask==2.3.2
+
+# Production tooling
+gunicorn==22.1.0            
+python-dotenv==1.0.0
+
+# Optional: monitoring/logging
+prometheus-client==0.17.0
