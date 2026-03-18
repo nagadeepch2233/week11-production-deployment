@@ -1,0 +1,4 @@
+│── monitoring/
+│ ├── prometheus.yml
+│ ├── grafana-dashboard.json
+│ └── alerts.yml
