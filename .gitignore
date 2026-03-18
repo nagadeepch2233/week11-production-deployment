@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.env
+
+# Virtualenv
+venv/
+.env
+
+# Docker
+*.log
+*.sqlite3
+backups/
+
+# IDEs
+.vscode/
+.idea/
